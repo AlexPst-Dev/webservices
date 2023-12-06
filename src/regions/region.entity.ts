@@ -1,4 +1,4 @@
-import { Territory } from 'src/territories/teritory.entity';
+import { Territory } from 'src/territories/territory.entity';
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
 
 @Entity()

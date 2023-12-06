@@ -1,6 +1,6 @@
 import { Controller, Get, Param } from '@nestjs/common';
 import { TerritoriesService } from './territories.service';
-import { Territory } from './teritory.entity';
+import { Territory } from './territory.entity';
 
 @Controller('territories')
 export class TerritoriesController {

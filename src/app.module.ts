@@ -6,7 +6,7 @@ import { Category } from './categories/category.entity';
 import { CategoriesModule } from './categories/categories.module';
 import { ProductsModule } from './products/products.module';
 import { Product } from './products/product.entity';
-import { Territory } from './territories/teritory.entity';
+import { Territory } from './territories/territory.entity';
 import { Region } from './regions/region.entity';
 import { TerritoriesModule } from './territories/territories.module';
 import { RegionsModule } from './regions/regions.module';
