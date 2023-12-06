@@ -6,6 +6,10 @@ import { Category } from './categories/category.entity';
 import { CategoriesModule } from './categories/categories.module';
 import { ProductsModule } from './products/products.module';
 import { Product } from './products/product.entity';
+import { Territory } from './territories/teritory.entity';
+import { Region } from './regions/region.entity';
+import { TerritoriesModule } from './territories/territories.module';
+import { RegionsModule } from './regions/regions.module';
 
 @Module({
   imports: [
@@ -16,11 +20,13 @@ import { Product } from './products/product.entity';
       username: 'root',
       password: '',
       database: 'sql_course',
-      entities: [Category, Product],
+      entities: [Category, Product, Territory, Region],
       synchronize: true,
     }),
     CategoriesModule,
     ProductsModule,
+    TerritoriesModule,
+    RegionsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

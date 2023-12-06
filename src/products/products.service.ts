@@ -22,6 +22,15 @@ export class ProductsService {
     });
   }
 
+  // Retourner la liste des produits par catégorie
+  async findByCategory(id: number): Promise<Product[]> {
+    return await this.ProductsRepository.find({
+      where: {
+        CategoryId: id as any,
+      },
+    });
+  }
+
   async remove(id: number): Promise<void> {
     await this.ProductsRepository.delete(id);
   }
