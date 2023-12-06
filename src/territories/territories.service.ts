@@ -25,4 +25,13 @@ export class TerritoriesService {
   async remove(id: number): Promise<void> {
     await this.TerritoriesRepository.delete(id);
   }
+
+  // Compter le nombre de territoires par région
+  async countTerritoriesByRegion(id: number): Promise<number> {
+    return await this.TerritoriesRepository.count({
+      where: {
+        RegionId: id as any,
+      },
+    });
+  }
 }

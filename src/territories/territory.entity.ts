@@ -1,5 +1,5 @@
 import { Region } from 'src/regions/region.entity';
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
 
 @Entity()
 export class Territory {
@@ -9,6 +9,6 @@ export class Territory {
   @Column()
   Name: string;
 
-  @OneToMany(() => Region, (region) => region.RegionId)
-  Products: Region[];
+  @ManyToOne(() => Region, (region) => region.RegionId)
+  RegionId: Region;
 }
