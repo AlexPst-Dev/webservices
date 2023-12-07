@@ -25,4 +25,13 @@ export class RegionsService {
   async remove(id: number): Promise<void> {
     await this.RegionsRepository.delete(id);
   }
+
+  async countAllTerritoriesByRegions(): Promise<any> {
+    return await this.RegionsRepository.createQueryBuilder('r')
+      .select('r.RegionId', 'RegionId')
+      .addSelect('COUNT(t.TerritoryId)', 'nbTerritories')
+      .leftJoin('r.Territories', 't')
+      .groupBy('r.RegionId')
+      .getRawMany();
+  }
 }

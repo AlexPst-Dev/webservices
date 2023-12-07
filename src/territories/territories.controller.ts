@@ -22,4 +22,9 @@ export class TerritoriesController {
   countTerritoriesByRegion(@Param('id') id: number): Promise<number> {
     return this.territoriesService.countTerritoriesByRegion(id);
   }
+
+  @Get('count/regions')
+  countTerritoriesByRegions(): Promise<any> {
+    return this.territoriesService.countTerritoriesByRegions();
+  }
 }

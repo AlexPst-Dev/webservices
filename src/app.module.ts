@@ -22,6 +22,7 @@ import { RegionsModule } from './regions/regions.module';
       database: 'sql_course',
       entities: [Category, Product, Territory, Region],
       synchronize: true,
+      logging: true,
     }),
     CategoriesModule,
     ProductsModule,

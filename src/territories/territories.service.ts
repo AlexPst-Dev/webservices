@@ -34,4 +34,13 @@ export class TerritoriesService {
       },
     });
   }
+
+  async countTerritoriesByRegions(): Promise<any> {
+    return await this.TerritoriesRepository.createQueryBuilder('t')
+      .select('r.RegionId', 'RegionId')
+      .addSelect('COUNT(t.TerritoryId)', 'nbTerritories')
+      .innerJoin('t.RegionId', 'r')
+      .groupBy('r.RegionId')
+      .getRawMany();
+  }
 }

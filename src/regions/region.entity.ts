@@ -9,6 +9,6 @@ export class Region {
   @Column()
   Name: string;
 
-  @OneToMany(() => Territory, (territory) => territory.TerritoryId)
+  @OneToMany(() => Territory, (territory) => territory.RegionId)
   Territories: Territory[];
 }

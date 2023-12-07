@@ -9,6 +9,6 @@ export class Territory {
   @Column()
   Name: string;
 
-  @ManyToOne(() => Region, (region) => region.RegionId)
+  @ManyToOne(() => Region, (region) => region.Territories)
   RegionId: Region;
 }

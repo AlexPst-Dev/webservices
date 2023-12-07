@@ -17,4 +17,9 @@ export class RegionsController {
   findAll(): Promise<Region[]> {
     return this.regionsService.findAll();
   }
+
+  @Get('count/allRegions')
+  countAllTerritoriesByRegions(): Promise<any> {
+    return this.regionsService.countAllTerritoriesByRegions();
+  }
 }
