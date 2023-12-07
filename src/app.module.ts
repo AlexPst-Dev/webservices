@@ -10,6 +10,8 @@ import { Territory } from './territories/territory.entity';
 import { Region } from './regions/region.entity';
 import { TerritoriesModule } from './territories/territories.module';
 import { RegionsModule } from './regions/regions.module';
+import { ViewTerritoriesByRegionModule } from './views/territoriesByRegion/territoriesByRegion.module';
+import { TerritoriesByRegion } from './views/territoriesByRegion/territoriesByRegion.entity';
 
 @Module({
   imports: [
@@ -20,7 +22,7 @@ import { RegionsModule } from './regions/regions.module';
       username: 'root',
       password: '',
       database: 'sql_course',
-      entities: [Category, Product, Territory, Region],
+      entities: [Category, Product, Territory, Region, TerritoriesByRegion],
       synchronize: true,
       logging: true,
     }),
@@ -28,6 +30,7 @@ import { RegionsModule } from './regions/regions.module';
     ProductsModule,
     TerritoriesModule,
     RegionsModule,
+    ViewTerritoriesByRegionModule,
   ],
   controllers: [AppController],
   providers: [AppService],
